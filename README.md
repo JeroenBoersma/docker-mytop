@@ -1,11 +1,11 @@
 # docker-mytop
 
 MySQL *mytop* based on Alpine.
-Removed all unneeded content to keep it lightwight.
+Removed all unneeded content to keep it lightweight.
 
 ## Usage
 
-Pull this image and connect to a running host
+Pull the image and connect to a host running a database!
 
 Just run mytop:
 
