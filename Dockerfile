@@ -11,16 +11,20 @@ RUN apk add --no-cache perl perl-dbd-mysql perl-term-readkey && \
     mv * /tmp/ && mkdir -p core_perl/auto vendor_perl/auto && \
 
     mv /tmp/core_perl/auto/Socket core_perl/auto/ && \
+    mv /tmp/core_perl/auto/List core_perl/auto/ && \
     mv /tmp/core_perl/CORE core_perl/ && \
     mv /tmp/core_perl/Config.pm core_perl/ && \
     mv /tmp/core_perl/DynaLoader.pm core_perl/ && \
     mv /tmp/core_perl/Socket.pm core_perl/ && \
+    mv /tmp/core_perl/Scalar core_perl/ && \
+    mv /tmp/core_perl/List core_perl/ && \
 
     mv /tmp/vendor_perl/auto/DB* vendor_perl/auto/ && \
     mv /tmp/vendor_perl/DB* vendor_perl/ && \
     mv /tmp/vendor_perl/auto/Term vendor_perl/auto/ && \
     mv /tmp/vendor_perl/Term vendor_perl/ && \
 
+    find /tmp/ && \
     rm -rf /tmp/* && \
 
     cd /usr/share/perl5 && \
@@ -39,6 +43,7 @@ RUN apk add --no-cache perl perl-dbd-mysql perl-term-readkey && \
     mv /tmp/core_perl/vars.pm core_perl/ && \
     mv /tmp/core_perl/warnings* core_perl/ && \
 
+    find /tmp/ && \
     rm -rf /tmp/*
 
 
